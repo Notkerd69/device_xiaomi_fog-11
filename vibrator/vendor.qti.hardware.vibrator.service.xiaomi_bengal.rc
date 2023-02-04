@@ -1,4 +1,0 @@
-service vendor.qti.vibrator.xiaomi_bengal /vendor/bin/hw/vendor.qti.hardware.vibrator.service.xiaomi_bengal
-    class hal
-    user system
-    group system input
