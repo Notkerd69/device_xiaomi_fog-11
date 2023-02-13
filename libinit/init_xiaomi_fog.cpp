@@ -15,8 +15,7 @@ static const variant_info_t fog_global_info = {
 
     .brand = "Redmi",
     .device = "fog",
-    .marketname = "Redmi 10C",
-    .model = "220333QAG",
+    .model = "Redmi 10C",
     .build_fingerprint = "Redmi/fog/fog:11/RKQ1.211001.001/V13.0.7.0.RGEMIXM:user/release-keys",
 
     .nfc = false,
@@ -28,8 +27,7 @@ static const variant_info_t fog_global2_info = {
 
     .brand = "Redmi",
     .device = "fog",
-    .marketname = "Redmi 10 Power",
-    .model = "220333QBI",
+    .model = "Redmi 10 Power",
     .build_fingerprint = "Redmi/fog_global2/fog:11/RKQ1.211001.001/V13.0.7.0.RGEMIXM:user/release-keys",
 
     .nfc = false,
@@ -41,8 +39,7 @@ static const variant_info_t fog_in_info = {
 
     .brand = "Redmi",
     .device = "fog",
-    .marketname = "Redmi 10",
-    .model = "220333QBI",
+    .model = "Redmi 10",
     .build_fingerprint = "Redmi/fog_in/fog:11/RKQ1.211001.001/V13.0.7.0.RGEINXM:user/release-keys",
 
     .nfc = false,
@@ -54,8 +51,7 @@ static const variant_info_t rain_global_info = {
 
     .brand = "Redmi",
     .device = "rain",
-    .marketname = "Redmi 10C",
-    .model = "220333QNY",
+    .model = "Redmi 10C",
     .build_fingerprint = "Redmi/rain_global/rain:11/RKQ1.211001.001/V13.0.7.0.RGEMIXM:user/release-keys",
 
     .nfc = true,
@@ -67,8 +63,7 @@ static const variant_info_t wind_global_info = {
 
     .brand = "Redmi",
     .device = "wind",
-    .marketname = "Redmi 10C",
-    .model = "220333QL",
+    .model = "Redmi 10C",
     .build_fingerprint = "Redmi/wind_global/wind:11/RKQ1.211001.001/V13.0.7.0.RGEMIXM:user/release-keys",
 
     .nfc = false,
