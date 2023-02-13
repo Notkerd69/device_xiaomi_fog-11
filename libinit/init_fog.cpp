@@ -57,8 +57,7 @@ void load_redmi_fog() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi 10C");
-    property_override("ro.product.model", "220333QAG");
+    property_override("ro.product.model", "Redmi 10C");
     property_override("ro.product.mod_device", "fog_global");
     property_override("ro.product.name", "fog_global");
     property_override("vendor.usb.product_string", "Redmi 10C");
@@ -69,8 +68,7 @@ void load_redmi_fog_in() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi 10");
-    property_override("ro.product.model", "220333QBI");
+    property_override("ro.product.model", "Redmi 10");
     property_override("ro.product.mod_device", "fog_in");
     property_override("ro.product.name", "fog_in");
     property_override("vendor.usb.product_string", "Redmi 10");
@@ -81,8 +79,7 @@ void load_redmi_fog_in2() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi 10 Power");
-    property_override("ro.product.model", "220333QBI");
+    property_override("ro.product.model", "Redmi 10 Power");
     property_override("ro.product.mod_device", "fog_in2");
     property_override("ro.product.name", "fog_in2");
     property_override("vendor.usb.product_string", "Redmi 10 Power");
@@ -93,8 +90,7 @@ void load_redmi_rain() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "rain");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi 10C");
-    property_override("ro.product.model", "220333QNY");
+    property_override("ro.product.model", "Redmi 10C");
     property_override("ro.product.mod_device", "rain_global");
     property_override("ro.product.name", "rain_global");
     property_override("vendor.usb.product_string", "Redmi 10C");
@@ -105,8 +101,7 @@ void load_redmi_wind() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "wind");
     property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi 10C");
-    property_override("ro.product.model", "220333QL");
+    property_override("ro.product.model", "Redmi 10C");
     property_override("ro.product.mod_device", "wind_global");
     property_override("ro.product.name", "wind_global");
     property_override("vendor.usb.product_string", "Redmi 10C");
