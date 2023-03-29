@@ -97,8 +97,8 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fog
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_fog
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fog
+TARGET_RECOVERY_DEVICE_MODULES := libinit_fog
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
