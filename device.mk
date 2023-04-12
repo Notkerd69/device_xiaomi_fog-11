@@ -345,14 +345,15 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    NotchBarKiller
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
+    CarrierConfigFog \
+    DialerFog \
+    FrameworksFog \
+    SettingsFog \
+    SettingsProviderFog \
+    SystemUIFog \
+    TelephonyFog \
+    WifiFog \
+    NotchBarKiller 
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -528,7 +529,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
-    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
