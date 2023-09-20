@@ -1,6 +1,11 @@
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
+# Blur
+ro.sf.blurs_are_expensive=0
+ro.surface_flinger.supports_background_blur=0
+ro.launcher.blur.appLaunch=0
+
 # Camera
 camera.disable_zsl_mode=true
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera

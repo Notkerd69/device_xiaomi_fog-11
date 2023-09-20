@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter fog spes,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),fog)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
