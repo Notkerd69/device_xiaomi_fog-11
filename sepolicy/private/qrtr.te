@@ -1,0 +1,5 @@
+allow init self:qipcrtr_socket { write };
+allow init self:qipcrtr_socket { read };
+allow init self:qipcrtr_socket { create };
+allow init self:qipcrtr_socket { getattr };
+allow init self:qipcrtr_socket { setopt };
