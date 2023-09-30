@@ -411,7 +411,8 @@
 
 
     <!-- Headphone class-H mode -->
-    <ctl name="RX HPH Mode" value="CLS_AB" />
+    <ctl name="RX_HPH_PWR_MODE" value="ULP" />
+    <ctl name="RX HPH Mode" value="CLS_H_ULP" />
 
     <!-- IIR/voice anc -->
     <ctl name="IIR0 Band1" id ="0" value="268435456" />
@@ -2609,6 +2610,15 @@
         <ctl name="ADC2_MIXER Switch" value="1" />
         <ctl name="ADC2 MUX" value="INP2" />
     </path>
+
+    <path name="amic3">
+        <ctl name="TX DEC1 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX1" value="SWR_MIC4" />
+        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
+        <ctl name="ADC2_MIXER Switch" value="1" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
+    </path>
     <!-- lct modify end-->
 
     <path name="dmic1">
@@ -2707,7 +2717,10 @@
     <!-- lct modify -->
     <path name="speaker-mic">
         <path name="amic1" />
+        <path name="amic3" />
         <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="speaker-mic-liquid">
@@ -2732,18 +2745,28 @@
 
     <path name="handset-mic">
         <path name="amic1" />
+        <path name="amic3" />
+        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="voice-handset-mic">
         <path name="amic1" />
+        <ctl name="ADC1 Volume" value="8" />
     </path>
 
     <path name="record-mic">
         <path name="amic1" />
+        <path name="amic3" />
+        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="handset-mic-factory">
         <ctl name="TX_DEC0 Volume" value="84" />
+        <ctl name="ADC1 Volume" value="8" />
         <path name="amic1" />
     </path>
     <!-- lct modify end-->
@@ -2952,6 +2975,9 @@
     </path>
 
     <path name="afe-proxy">
+    </path>
+
+    <path name="echo-ref-record">
     </path>
 
     <path name="display-port">
