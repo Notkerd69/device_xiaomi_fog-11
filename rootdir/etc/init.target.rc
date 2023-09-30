@@ -83,6 +83,10 @@ on post-fs-data
     chmod 0666 /sys/class/backlight/panel0-backlight/brightness
     chmod 0666 /sys/class/drm/card0-DSI-1/disp_param
 
+    # For proximity sensor
+    chmod 0644 /dev/elliptic0
+    chmod 0644 /dev/elliptic1
+
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
     mkdir /dev/cpuset/camera-daemon
@@ -99,6 +103,23 @@ on boot
     chmod 0444 /sys/class/drm/card0-DSI-1/panel_info
     chown system system /sys/class/drm/card0-DSI-1/doze_brightness
     chown system system /sys/class/drm/card0-DSI-1/doze_backlight
+
+    chown system system /dev/cpuset/cgroup.procs
+    chown system system /dev/cpuset/foreground/cgroup.procs
+    chown system system /dev/cpuset/background/cgroup.procs
+    chown system system /dev/cpuset/system-background/cgroup.procs
+    chown system system /dev/cpuset/top-app/cgroup.procs
+
+    chmod 0666 /dev/cpuset/foreground/cgroup.procs
+    chmod 0666 /dev/cpuset/background/cgroup.procs
+    chmod 0666 /dev/cpuset/system-background/cgroup.procs
+    chmod 0666 /dev/cpuset/top-app/cgroup.procs
+    chmod 0666 /dev/cpuset/cgroup.procs
+
+    chown system system /dev/stune/background/cgroup.procs
+    chown system system /dev/stune/top-app/cgroup.procs
+    chmod 0666 /dev/stune/background/cgroup.procs
+    chmod 0666 /dev/stune/top-app/cgroup.procs
 
     # DT2W
     chown system system /proc/tp_gesture
@@ -136,6 +157,10 @@ on charger
 
     mkdir /data/vendor/charge_logger 0771 system system
     start charge_logger
+
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
@@ -184,20 +209,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
-
-    chmod 0777 /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/input_suspend
-
-service vendor.displayfeature /vendor/bin/displayfeature
-    class late_start
-    user root
-    group root
-
-on property:init.svc.surfaceflinger=stopped
-    stop vendor.displayfeature
-
-on property:init.svc.surfaceflinger=running
-    start vendor.displayfeature
-
-on property:init.svc.surfaceflinger=restarting
-    stop vendor.displayfeature
