@@ -1,5 +1,2 @@
 dontaudit untrusted_app odsign_prop:file read;
-get_prop(untrusted_app, adbd_prop)
 dontaudit untrusted_app system_file:file lock;
-get_prop(untrusted_app, apexd_prop)
-allow untrusted_app adbd_prop:file { map };
