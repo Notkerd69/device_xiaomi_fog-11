@@ -98,8 +98,8 @@ ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/manifest_c3qn.xml
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fog
-TARGET_RECOVERY_DEVICE_MODULES := libinit_fog
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fog
+TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_fog
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
@@ -135,9 +135,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
 TARGET_KERNEL_HEADERS := kernel/xiaomi/fog
 TARGET_KERNEL_SOURCE := kernel/xiaomi/fog
-
-# LMKD
-TARGET_LMKD_STATS_LOG := true
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -231,7 +228,7 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -1,12 +1,40 @@
-# Bluetooth
-persist.vendor.bt.                              u:object_r:vendor_bluetooth_prop:s0
-
 # Camera
 persist.camera.                                 u:object_r:vendor_camera_prop:s0
 persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
 vendor.camera.                                  u:object_r:vendor_camera_prop:s0
 vendor.vidhance.                                u:object_r:vendor_camera_prop:s0
+
+# DFPS
+persist.vendor.dfps.level                       u:object_r:vendor_display_prop:s0
+persist.vendor.video.dfps.level                 u:object_r:vendor_display_prop:s0
+persist.vendor.power.dfps.level                 u:object_r:vendor_display_prop:s0
+
+# Displayfeature
+persist.vendor.dc_backlight.enable              u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.dc_backlight.threshold           u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.df.color.temp                    u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.df.extcolor.proc                 u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.max.brightness                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.bl.notify                             u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.bl.poll                               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.bcbc.enable                           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.cabc.enable                           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.dfps.enable                           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.df.effect.conflict                    u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.default_fps                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.eyecare.level                         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.eyecare.threshold                     u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.hist.threshold                        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.histogram.enable                      u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.whitepoint_calibration_enable         u:object_r:vendor_displayfeature_prop:s0
+vendor.displayfeature.entry.enable              u:object_r:vendor_displayfeature_prop:s0
+vendor.display.panel.calibration.status         u:object_r:vendor_displayfeature_prop:s0
+vendor.hbm.enable                               u:object_r:vendor_displayfeature_prop:s0
+vendor.panel.color                              u:object_r:vendor_displayfeature_prop:s0
+vendor.panel.display                            u:object_r:vendor_displayfeature_prop:s0
+vendor.panel.touch_vendor                       u:object_r:vendor_displayfeature_prop:s0
+vendor.panel.vendor                             u:object_r:vendor_displayfeature_prop:s0
 
 # Fingerprint
 persist.vendor.fpc.                             u:object_r:vendor_fingerprint_prop:s0
@@ -23,26 +51,11 @@ vendor.sys.fp                                   u:object_r:vendor_fingerprint_pr
 ro.boot.factorybuild                            u:object_r:vendor_public_vendor_default_prop:s0
 ro.boot.hwversion                               u:object_r:vendor_public_vendor_default_prop:s0
 
-# IMEI
-persist.vendor.radio.imei                       u:object_r:vendor_deviceid_prop:s0
-persist.vendor.radio.meid                       u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.imei                              u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.meid                              u:object_r:vendor_deviceid_prop:s0
-
 # Mlipay
 persist.vendor.sys.pay                          u:object_r:vendor_tee_listener_prop:s0
 
-# Radio/RIL
-ro.vendor.ril.svlte1x                           u:object_r:vendor_radio_prop:s0
-ro.vendor.ril.svdo                              u:object_r:vendor_radio_prop:s0
-vendor.rild.libpath                             u:object_r:vendor_radio_prop:s0
-
 # RIL
 ro.vendor.ril                                   u:object_r:vendor_public_vendor_default_prop:s0
-
-# Serial Number
-ro.vendor.oem.sno                               u:object_r:vendor_sno_prop:s0
-ro.vendor.oem.psno                              u:object_r:vendor_sno_prop:s0
 
 # Thermal
 vendor.sys.thermal.                             u:object_r:vendor_thermal_normal_prop:s0

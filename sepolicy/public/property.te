@@ -1,2 +1,2 @@
 # IMEI
-vendor_public_prop(deviceid_prop)
+type deviceid_prop, property_type;

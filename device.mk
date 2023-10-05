@@ -52,7 +52,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.a2dp.default \
     audio.bluetooth.default \
+    audio.primary.bengal \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -110,7 +112,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libgui_vendor \
     libstdc++.vendor \
@@ -136,14 +138,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Consumer IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-
 # Device ID
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
@@ -154,28 +148,44 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1 \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0-service
+
+PRODUCT_PACKAGES += \
     memtrack.bengal \
+    gralloc.bengal \
+    hwcomposer.bengal
+
+PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
+    libdisplayconfig.qti.vendor \
     libqdMetaData \
-    libqdMetaData.system \
     libsdmcore \
     libsdmutils \
-    libtinyxml \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
     vendor.display.config@1.14 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
+    vendor.display.config@2.0.vendor
+
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.allocator@3.0.vendor \
+    vendor.qti.hardware.display.allocator@4.0.vendor \
+    vendor.qti.hardware.display.composer@2.0.vendor \
+    vendor.qti.hardware.display.composer@3.0.vendor \
+    vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -242,7 +252,9 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
 
 # Keylayout
 PRODUCT_COPY_FILES += \
