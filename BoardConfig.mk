@@ -93,6 +93,9 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += c3qn
 ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/manifest_c3qn.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fog
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_fog
