@@ -6,7 +6,7 @@ persist.ro.ril.oem.btmac       u:object_r:vendor_btmac_prop:s0
 ro.camera.req.fmq.             u:object_r:exported_default_prop:s0
 ro.camera.res.fmq.             u:object_r:exported_default_prop:s0
 sys.boot.hwc                   u:object_r:exported_default_prop:s0
-sys.cameratest.cameralevel     u:object_r:exported_camera_prop:s0
+sys.cameratest.cameralevel     u:object_r:exported_default_prop:s0
 vendor.sys.camerainfo          u:object_r:exported_system_prop:s0
 
 # Fingerprint
@@ -27,13 +27,15 @@ ro.miui.                       u:object_r:exported_system_prop:s0
 # Hardware
 ro.hardware.chipname           u:object_r:exported_default_prop:s0
 
+# RIL
+ro.ril.oem.wifimac                      u:object_r:vendor_radio_prop:s0
+
 # Tethering
 persist.device_config.         u:object_r:exported_default_prop:s0
 
 # WiFi
 ro.wlan.bdf                    u:object_r:vendor_public_vendor_default_prop:s0
 ro.wlan.chip                   u:object_r:vendor_public_vendor_default_prop:s0
-ro.ril.oem.wifimac             u:object_r:vendor_wifimac_prop:s0
 
 # WiFi Display
 persist.vendor.setWFDInfo.     u:object_r:vendor_wfd_sys_debug_prop:s0
