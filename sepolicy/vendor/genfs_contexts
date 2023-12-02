@@ -2,6 +2,8 @@
 genfscon sysfs /class/power_supply/battery/capacity                                                 u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /class/power_supply/bms                                                              u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms                      u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup35                      u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup35/event_count               u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0065/power_supply/sc8551-standalone/charging_enabled u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms   u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled u:object_r:vendor_sysfs_battery_supply:s0
@@ -106,6 +108,10 @@ genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup                       
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup/wakeup4                                                                                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup/wakeup4/event_count                                                                                                                               u:object_r:sysfs_wakeup:s0
+
+
 
 # vibrate
 genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/activate                                                                                                         u:object_r:sysfs_leds:s0

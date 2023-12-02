@@ -1,0 +1,1 @@
+allow syste_suspend sysfs:file { getattr };

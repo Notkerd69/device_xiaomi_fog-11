@@ -1,0 +1,2 @@
+allow snap_app sysfs_msm_subsys:dir { search };
+allow snap_app unlabeled:dir { search };
