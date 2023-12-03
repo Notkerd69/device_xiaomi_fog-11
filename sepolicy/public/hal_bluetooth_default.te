@@ -1,0 +1,4 @@
+allow hal_bluetooth_default default_prop:file { read };
+allow hal_bluetooth_default default_prop:property_service { set };
+allow hal_bluetooth_default vendor_diag_device:chr_file { read };
+allow hal_bluetooth_default vendor_ramdump_vendor_data_file:dir { read };

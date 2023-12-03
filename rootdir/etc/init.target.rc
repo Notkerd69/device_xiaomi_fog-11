@@ -155,9 +155,6 @@ on charger
     setprop sys.usb.configfs 1
     start mi_thermald
 
-    mkdir /data/vendor/charge_logger 0771 system system
-    start charge_logger
-
     # Restrict permissions to socket file
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
