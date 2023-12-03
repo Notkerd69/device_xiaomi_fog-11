@@ -1,0 +1,2 @@
+allow hal_wifi_default hal_wifi_default:capability { sys_module };
+allow hal_wifi_default vendor_tombstone_data_file:dir { search };
