@@ -1,0 +1,2 @@
+allow vendor_wcnss_service default_prop:property_service { set };
+allow vendor_wcnss_service radio_prop:property_service { set };

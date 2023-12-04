@@ -1,0 +1,1 @@
+allow device sysfs:filesystem { associate };
