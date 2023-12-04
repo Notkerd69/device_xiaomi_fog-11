@@ -4,6 +4,8 @@ genfscon sysfs /class/power_supply/bms                                          
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms                      u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup35                      u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup35/event_count               u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup36                      u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup36/event_count               u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0065/power_supply/sc8551-standalone/charging_enabled u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms   u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled u:object_r:vendor_sysfs_battery_supply:s0
@@ -63,8 +65,12 @@ genfscon sysfs /devices/platform/soc/soc:ant_check_div/power/wakeup             
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup                                                                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup/wakeup                                                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/power/wakeup                                                                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/wakeup/wakeup18                                                                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/wakeup/wakeup18/event_count                                                                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/va-macro/va_swr_ctrl/power/wakeup  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/power/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup64  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup64/event_count  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/power/wakeup                                                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/power/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
@@ -89,6 +95,9 @@ genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1                                                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1/event_count                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/power/wakeup                                                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup/wakeup36                                                                                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup/wakeup94                                                                                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup/wakeup94/event_count                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4e00000.ssusb/power/wakeup                                                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/power/wakeup                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/power/wakeup                                                  u:object_r:sysfs_wakeup:s0
