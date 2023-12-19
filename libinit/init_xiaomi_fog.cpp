@@ -47,7 +47,7 @@ static const variant_info_t fog_in_info = {
 
 static const variant_info_t rain_global_info = {
     .hwc_value = "",
-    .sku_value = "",
+    .sku_value = "c3qn",
 
     .brand = "Redmi",
     .device = "rain",
