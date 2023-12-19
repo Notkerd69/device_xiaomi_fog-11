@@ -298,4 +298,19 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IDisplayFeature/default</fqname>
     </hal>
+        <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::INfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::INxpNfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.nxpnfclegacy</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::INxpNfcLegacy/default</fqname>
+    </hal>
 </manifest>
