@@ -347,20 +347,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    AospFrameworkResOverlay \
-    AospWifiResOverlay \
     CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    FrameworksResCommon \
     FrameworksResTarget \
-    GmsTelecommOverlay \
-    GmsTelephonyOverlay \
     NotchBarKiller \
-    SystemUIResCommon \
-    TetheringConfigOverlay \
-    TelecommResCommon \
-    TelephonyResCommon \
-    WifiFog 
+    TetheringOverlay \
+    WifiResCommon 
 
 # For framework-res__auto_generated_rro_vendor.apk
 PRODUCT_ENFORCE_RRO_TARGETS := *
