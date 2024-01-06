@@ -342,16 +342,25 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.nxp.mifare.xml
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
-    CarrierConfigFog \
-    DialerFog \
-    FrameworksFog \
-    SettingsFog \
-    SettingsProviderFog \
-    SystemUIFog \
-    TelephonyFog \
-    WifiFog \
-    NotchBarKiller 
+    AospFrameworkResOverlay \
+    AospWifiResOverlay \
+    CarrierConfigResCommon \
+    CellBroadcastReceiverResCommon \
+    FrameworksResCommon \
+    FrameworksResTarget \
+    GmsTelecommOverlay \
+    GmsTelephonyOverlay \
+    NotchBarKiller \
+    SystemUIResCommon \
+    TetheringConfigOverlay \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiFog 
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
