@@ -1,2 +1,3 @@
 # Allow sensors to access backlight sysfs state
 r_dir_file(vendor_sensors, vendor_sysfs_graphics)
+allow vendor_sensors unlabeled:file read;
