@@ -1,24 +1,34 @@
-# Android 11 Tree for fog
+Unified A11 Device Tree for Redmi 10/10C/10 Power
+===========================================
 
-I have decided to adapt the tree to Android 11 for fog in my free time, based on Jabiyeff's work (Credits to him). For now the tree is not complete and works on permissive, so some bugs can be expected. Plus, the tree work on spes rebranding to him. Also it's just for fun and learning purposes, because I am a complete noob.
+The Redmi 10C (fog) is an entry level-smartphone from Redmi, Released 2022, March 23
 
-### What works?
-* Boots
-* Selinux enforcing 
-* RIL
-* WiFi
-* Mobile Data
-* VoLTE
-* Bluetooth
-* Sound/Vibration
-* Fingerprint
-* Camera
-* Flashlight
-* GPS
-* SDCard
+## Device specifications
 
-### What doesn't work, or isn't tested
-* Brightness is a bit low than usual (In some roms)
-* NFC is broken
+Basic   | Spec Sheet
+-------:|:-------------------------
+Shipped OS      | Android 11 MIUI 13
+CPU     | Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)
+SoC     | Qualcomm SM6225 Snapdragon 680 4G (6 nm)
+GPU     | Adreno 610
+Memory  | 3GB / 4GB / 6GB / 8GB RAM
+MicroSD | microSDXC (dedicated slot, Expandable up to 1TB)
+Battery | Li-Po 5000 / 6000 mAh (non-removable)
+Storage | 64/128GB
+Resolution | 720 x 1650 pixels (~268 ppi density)
+Camera (Rear)  | 50 MP, f/1.8, 26mm (wide), PDAF 2 MP, f/2.4, (depth)
+Camera (Front) | 5 MP, f/2.2
+Video   | 1080p@30fps
+Fingerprint | Rear-mounted (FPC)
 
-- Credits to @boedhack99 for inital tree for sm6225 devices
+## Device picture
+
+![Redmi 10C](https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-10c/specs01.png "Redmi 10C")
+
+```
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```
