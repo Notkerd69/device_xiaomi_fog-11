@@ -43,9 +43,6 @@ genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup_enable                  
 genfscon sysfs /devices/platform/soc/soc:goodix_fp                                                  u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:silead_fp                                                  u:object_r:vendor_sysfs_fingerprint:s0
 
-# kmsg
-genfscon proc /last_kmsg                                                        u:object_r:proc_last_kmsg:s0
-
 # UFS
 genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
 

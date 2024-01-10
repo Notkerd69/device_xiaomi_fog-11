@@ -19,9 +19,6 @@ type vendor_sysfs_iio, fs_type, sysfs_type;
 type per_boot_file, file_type, data_file_type, core_data_file_type;
 type persist_subsys_file, vendor_persist_type, file_type;
 
-# ProcFS
-type proc_last_kmsg, fs_type, proc_type;
-
 # SysFS
 type sysfs_msm_boot, fs_type, sysfs_type;
 type sysfs_msm_subsys, fs_type, sysfs_type;
