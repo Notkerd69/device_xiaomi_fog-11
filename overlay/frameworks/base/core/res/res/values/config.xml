@@ -22,10 +22,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- If true, the screen can be rotated via the accelerometer in all 4
-         rotations as the default behavior. -->
-     <bool name="config_allowAllRotations">true</bool>
-
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">true</bool>
@@ -57,6 +53,10 @@
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
      <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
@@ -156,6 +156,9 @@
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
      <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
+    <!-- True if the device supports Sustained Performance Mode-->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
 
@@ -165,9 +168,6 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
      <bool name="config_suspendWhenScreenOffDueToProximity">false</bool>
-
-    <!-- True if the device supports Sustained Performance Mode-->
-     <bool name="config_sustainedPerformanceModeSupported">false</bool>
 
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of

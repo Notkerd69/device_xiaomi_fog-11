@@ -352,7 +352,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResTarget \
     NotchBarKiller \
     TetheringOverlay \
     WifiResCommon 
