@@ -202,10 +202,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# DumpState
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-fog
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_bengal
