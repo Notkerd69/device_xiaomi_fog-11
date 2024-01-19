@@ -28,7 +28,7 @@
 #
 
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_lct_pinctrl audio_aw87xxx audio_wcd9xxx audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_rouleur audio_rouleur_slave audio_machine_bengal
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_aw87xxx audio_fs1599 audio_wcd9xxx audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_rouleur audio_rouleur_slave audio_machine_bengal
     write /proc/sys/kernel/sched_boost 1
 
 on init
@@ -123,19 +123,15 @@ on boot
     chmod 0666 /dev/stune/background/cgroup.procs
     chmod 0666 /dev/stune/top-app/cgroup.procs
 
-    # Governor settings
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq 1516000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 1344000
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1344000"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 120
-
     # DT2W
     chown system system /proc/tp_gesture
     chmod 0664 /proc/tp_gesture
 
-   # USB controller configuration
+    # Battery health
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
+    # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
@@ -158,6 +154,9 @@ on boot
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
+
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
 
 on charger
     start vendor.power_off_alarm
@@ -203,23 +202,14 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-service dcvs-sh /vendor/bin/init.qti.dcvs.sh
-    class late_start
-    user root
-    group root system
-    disabled
-    oneshot
+    # Dex2oat
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6,7
+    setprop dalvik.vm.dex2oat-threads 4
+    setprop dalvik.vm.image-dex2oat-cpu-set 4,5,6,7
+    setprop dalvik.vm.image-dex2oat-threads 4
 
-on property:vendor.dcvs.prop=1
-   start dcvs-sh
-
-on post-fs-data
-    mkdir /data/vendor 0777 nfc nfc
-    mkdir /data/vendor/nfc 0777 nfc nfc
-    mkdir /data/vendor/nfc/param 0777 nfc nfc
-    chmod 0660 /dev/pn553
-    chown nfc nfc /dev/pn553
-
+    # NFC
 service vendor.secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.2-service
     override
     class hal
@@ -237,6 +227,14 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
 on boot && property:ro.boot.hwname=rain
     start vendor.nfc_hal_service
     start vendor.secure_element_hal_service
+
+on post-fs-data
+    mkdir /data/vendor 0777 nfc nfc
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /data/vendor/nfc/param 0777 nfc nfc
+    chmod 0660 /dev/pn553
+    chown nfc nfc /dev/pn553
+
     # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
 
